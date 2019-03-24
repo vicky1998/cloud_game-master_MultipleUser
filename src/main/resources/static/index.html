@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body style="background:black;">
+<noscript>
+    <h2>Sorry! Your browser doesn't support Javascript</h2>
+</noscript>
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBAYzyrqF8MJhqLmLi4hUD0ZAur7PDawEk",
+    authDomain: "cloud-gaming-007.firebaseapp.com",
+    databaseURL: "https://cloud-gaming-007.firebaseio.com",
+    projectId: "cloud-gaming-007",
+    storageBucket: "cloud-gaming-007.appspot.com",
+    messagingSenderId: "3567206802"
+  };
+  firebase.initializeApp(config);
+</script>
+<div id="username-page">
+    <div class="username-page-container">
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">Connect to Server</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="chat-page" class="hidden">
+    <canvas width="400" height="400" id="game"></canvas>
+</div>
+
+<script src="/js/sockjs.min.js"></script>
+<script src="/js/stomp.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
